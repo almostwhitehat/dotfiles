@@ -49,6 +49,9 @@ set runtimepath^=~/.vim/bundle/ag
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+set backspace=indent,eol,start            " allow backspacing over everything in insert mode
+set ignorecase smartcase
+set gdefault                              " assume the /g flag on :s substitutions to replace all matches in a line
 
 " Automatically close vim if NERDTree is the only thing open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -104,9 +107,30 @@ if executable("ag")
 endif
 nnoremap <silent><C-p> :CtrlSpace O<CR>
 
+" Use spae as leader
+let mapleader = "\<Space>"
+
 " Spec runner
 noremap <leader>r :!rspec %
 noremap <leader>f :!FEATURES=true rspec %
 
 " Rubocop auto-correct
 noremap <leader>= :!rubocop --auto-correct %
+
+" Use 0 to jump to the first non-whitespace character in a line
+nmap 0 ^
+
+" jk or kj in insert mode to return to normal and save changes 
+imap jk <ESC>:w<CR> 
+imap kj <ESC>:w<CR> 
+
+
+"Ruby is new, and sometimes funtimes
+au BufRead,BufNewFile Vagrantfile, Gemfile, Guardfile set filetype=ruby
+au BufRead,BufNewFile Gemfile set filetype=ruby
+au BufRead,BufNewFile Guardfile set filetype=ruby
+au BufRead,BufNewFile .pryrc set filetype=ruby
+
+" Insert pry or remote-pry
+nmap <leader>bp orequire 'pry'; binding.pry<esc>^
+nmap <leader>brp orequire 'pry'; binding.remote_pry<esc>^
