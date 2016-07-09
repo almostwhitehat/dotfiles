@@ -64,10 +64,6 @@ set laststatus=2
 colorscheme PerfectDark
 let g:airline_theme="powerlineish"
 
-" Configure CtrlP
-let g:ctrlp_clear_cache_on_exit = 0
-let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
-
 " The Silver Searcher
 if executable('ag')
   " Use ag over grep
