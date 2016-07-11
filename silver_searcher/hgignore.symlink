@@ -1,0 +1,5 @@
+node_modules/*
+*/javascripts/vendor/*
+public-legacy/javascripts/vendor/*
+public/*
+public-legacy/*
