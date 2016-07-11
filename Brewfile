@@ -6,6 +6,7 @@ brew 'ack'
 brew 'coreutils'
 brew 'unrar'
 brew 'wget'
+brew 'htop'
 
 cask 'google-chrome'
 cask 'slack'
