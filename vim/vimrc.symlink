@@ -2,6 +2,8 @@ set nocompatible
 set hidden
 filetype off
 
+runtime macros/matchit.vim    " Enable % jumping between def / end
+
 " Set terminal colors to 256
 set t_Co=256
 
@@ -22,6 +24,7 @@ Plugin 'tpope/vim-cucumber'                 " Cucumber step definition support
 Plugin 'tpope/vim-rails'                    " All kinds of rails things
 Plugin 'tpope/vim-endwise'                  " Automatically close structures
 Plugin 'tpope/vim-fugitive'                 " Git plugin
+Plugin 'tpope/vim-obsession'                " Persistent sessions
 Plugin 'vim-airline/vim-airline'            " Status bar
 Plugin 'vim-airline/vim-airline-themes'     " Themes for airline
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'  " Automatically toggle between relative and absolute line numers
@@ -34,6 +37,8 @@ Plugin 'jeetsukumaran/vim-buffergator'      " Buffer switching
 Plugin 'vim-ctrlspace/vim-ctrlspace'        " Tab and window management
 Plugin 'vim-scripts/rainbow-end'            " rainbow matchers for ruby syntax
 Plugin 'guns/xterm-color-table.vim'         " Show xterm colors
+Plugin 'kana/vim-textobj-user'              " Preerquisite for the vim-textobj-rubyblock
+Plugin 'nelstrom/vim-textobj-rubyblock'     " Ruby text objects
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
