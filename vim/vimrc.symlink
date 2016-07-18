@@ -106,6 +106,9 @@ vnoremap <S-Tab> <gv
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 
+" Don't show trailing whitespace warning in airline
+autocmd VimEnter * AirlineToggleWhitespace
+
 " Configure ctrlspace
 if executable("ag")
   let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
