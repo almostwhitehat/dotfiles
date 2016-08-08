@@ -38,7 +38,7 @@ Plugin 'vim-ctrlspace/vim-ctrlspace'        " Tab and window management
 Plugin 'vim-scripts/rainbow-end'            " rainbow matchers for ruby syntax
 Plugin 'guns/xterm-color-table.vim'         " Show xterm colors
 Plugin 'kana/vim-textobj-user'              " Preerquisite for the vim-textobj-rubyblock
-Plugin 'nelstrom/vim-textobj-rubyblock'     " Ruby text objects
+Plugin 'almostwhitehat/vim-textobj-rubyblock'     " Ruby text objects
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
