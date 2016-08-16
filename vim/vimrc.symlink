@@ -142,3 +142,10 @@ au BufRead,BufNewFile .pryrc set filetype=ruby
 " Insert pry or remote-pry
 nmap <leader>bp orequire 'pry'; binding.pry<esc>^
 nmap <leader>brp orequire 'pry'; binding.remote_pry<esc>^
+
+" Show menu for command completion with tab
+set wildmenu
+set wildmode=list:longest,full
+
+" I should feel bad about this
+set mouse=a
