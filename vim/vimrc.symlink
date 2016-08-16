@@ -36,6 +36,7 @@ Plugin 'miyakogi/conoline.vim'              " Highlights the current line
 Plugin 'jeetsukumaran/vim-buffergator'      " Buffer switching
 Plugin 'vim-ctrlspace/vim-ctrlspace'        " Tab and window management
 Plugin 'vim-scripts/rainbow-end'            " rainbow matchers for ruby syntax
+Plugin 'luochen1990/rainbow'                " Rainbow Parentheses
 Plugin 'guns/xterm-color-table.vim'         " Show xterm colors
 Plugin 'kana/vim-textobj-user'              " Preerquisite for the vim-textobj-rubyblock
 Plugin 'almostwhitehat/vim-textobj-rubyblock'     " Ruby text objects
