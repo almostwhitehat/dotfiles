@@ -1,0 +1,32 @@
+unbind C-b
+set -g prefix C-a
+
+# Reload with r
+bind-key r source-file ~/.tmux.conf \; display-message "~/.tmux-conf reloaded"
+
+set-option -g default-terminal "screen-256color"
+
+set -g status-left-length 50
+bind -n C-k send-keys -R \; clear-history
+
+# Make mouse useful in copy mode
+set -g mode-mouse on
+
+# Allow resizing panes
+set -g mouse-resize-pane on
+
+# Allow mouse to select which pane to use
+set -g mouse-select-pane on
+set -g mouse-select-window on
+
+# Scroll History
+set -g history-limit 30000
+
+# Lower escape timing from 500ms to 50ms for quicker response to scroll-buffer access.
+set -s escape-time 50
+
+# Resising with shift+arrow
+bind-key S-Left resize-pane -L 15
+bind-key S-Right resize-pane -R 15
+bind-key S-Up resize-pane -U 15
+bind-key S-Down resize-pane -D 15
