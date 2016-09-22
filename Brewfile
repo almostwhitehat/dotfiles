@@ -7,6 +7,7 @@ brew 'coreutils'
 brew 'unrar'
 brew 'wget'
 brew 'htop'
+brew 'reattach-to-user-namespace'
 
 cask 'google-chrome'
 cask 'slack'
