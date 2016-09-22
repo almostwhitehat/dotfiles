@@ -26,7 +26,11 @@ set -g history-limit 30000
 set -s escape-time 50
 
 # Resising with shift+arrow
-bind-key S-Left resize-pane -L 15
-bind-key S-Right resize-pane -R 15
-bind-key S-Up resize-pane -U 15
-bind-key S-Down resize-pane -D 15
+bind -n S-Up resize-pane -U 15
+bind -n S-Down resize-pane -D 15
+bind -n S-Left resize-pane -L 15
+bind -n S-Right resize-pane -R 15
+
+# Remap window splitting
+bind-key h split-window -h -c '#{pane_current_path}'
+bind-key v split-window -v -c '#{pane_current_path}'
