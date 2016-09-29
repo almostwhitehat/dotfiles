@@ -32,5 +32,5 @@ bind -n S-Left resize-pane -L 15
 bind -n S-Right resize-pane -R 15
 
 # Remap window splitting
-bind-key h split-window -h -c '#{pane_current_path}'
-bind-key v split-window -v -c '#{pane_current_path}'
+bind-key h split-window -h
+bind-key v split-window -v 
