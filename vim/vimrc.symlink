@@ -40,6 +40,7 @@ Plugin 'luochen1990/rainbow'                " Rainbow Parentheses
 Plugin 'guns/xterm-color-table.vim'         " Show xterm colors
 Plugin 'kana/vim-textobj-user'              " Preerquisite for the vim-textobj-rubyblock
 Plugin 'almostwhitehat/vim-textobj-rubyblock'     " Ruby text objects
+Plugin 'jiangmiao/auto-pairs'               " Automatically insert or delete parens/quotes in pairs
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -150,3 +151,11 @@ set wildmode=list:longest,full
 
 " I should feel bad about this
 set mouse=a
+
+" Use w!! for those times when I forget to sudo vim (always)
+cnoremap w!! call SudoSaveFile()
+function! SudoSaveFile() abort
+  execute (has('gui_running') ? '' : 'silent') 'write !env SUDO_EDITOR=tee sudo -e % >/dev/null'
+  let &modified = v:shell_error
+endfunction
+
