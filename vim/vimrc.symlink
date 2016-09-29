@@ -32,6 +32,8 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'airblade/vim-gitgutter'             " Shows git status in left gutter
 Plugin 'tpope/vim-surround'                 " Change surrounding parentheses/quotations/etc
 Plugin 'Valloric/YouCompleteMe'             " Code completion
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 Plugin 'miyakogi/conoline.vim'              " Highlights the current line
 Plugin 'jeetsukumaran/vim-buffergator'      " Buffer switching
 Plugin 'vim-ctrlspace/vim-ctrlspace'        " Tab and window management
