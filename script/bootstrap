@@ -137,8 +137,23 @@ install_dotfiles () {
   done
 }
 
+install_binfiles () {
+  info 'installing binfiles'
+
+  local overwrite_all=false backup_all=false skip_all=false
+
+  mkdir -p ~/bin
+
+  for src in $(find -H "${DOTFILES_ROOT}/bin" -executable -type f)
+  do
+    dst="$HOME/bin/$(basename $src)"
+    link_file "$src" "$dst"
+  done
+}
+
 setup_gitconfig
 install_dotfiles
+install_binfiles
 
 # If we're on a Mac, let's install and setup homebrew.
 if [ "$(uname -s)" == "Darwin" ]
