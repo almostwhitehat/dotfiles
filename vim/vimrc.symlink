@@ -35,7 +35,6 @@ Plugin 'Valloric/YouCompleteMe'             " Code completion
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'miyakogi/conoline.vim'              " Highlights the current line
-Plugin 'jeetsukumaran/vim-buffergator'      " Buffer switching
 Plugin 'vim-ctrlspace/vim-ctrlspace'        " Tab and window management
 Plugin 'vim-scripts/rainbow-end'            " rainbow matchers for ruby syntax
 Plugin 'luochen1990/rainbow'                " Rainbow Parentheses
