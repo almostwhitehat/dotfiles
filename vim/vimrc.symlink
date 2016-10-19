@@ -18,7 +18,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'               " Plugin manager
 Plugin 'scrooloose/nerdtree'                " File browser
 Plugin 'Xuyuanp/nerdtree-git-plugin'        " Show git statuses in nerdtree
-Plugin 'rking/ag.vim'                       " Use ag for searching
+Plugin 'mileszs/ack.vim'                    " Use ag for searching
 Plugin 'ctrlpvim/ctrlp.vim'                 " Ctrl+P fuzzy file searcher
 Plugin 'tpope/vim-cucumber'                 " Cucumber step definition support
 Plugin 'tpope/vim-rails'                    " All kinds of rails things

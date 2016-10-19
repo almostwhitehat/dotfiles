@@ -1,3 +1,4 @@
+.hgignore
 .DS_Store
 .agignore
 *~
