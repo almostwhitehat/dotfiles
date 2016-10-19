@@ -3,9 +3,9 @@
   b = branch
   co = checkout
   rh = reset --hard
-	please = push --force-with-lease
-	commend = commit --amend --no-edit
-	grog = log --graph --abbrev-commit --decorate --all --format=format:\"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)\"
+  aac = !git add -A && git commit -m
+  pf = push --force-with-lease
+  grog = log --graph --abbrev-commit --decorate --all --format=format:\"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)\"
 [include]
   path = ~/.gitconfig.local
 [hub]
@@ -34,3 +34,5 @@
   autocorrect = 1
 [push]
   default = current
+[pull]
+  rebase = true
