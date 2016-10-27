@@ -138,7 +138,6 @@ nmap 0 ^
 imap jk <ESC>:w<CR> 
 imap kj <ESC>:w<CR> 
 
-
 "Ruby is new, and sometimes funtimes
 au BufRead,BufNewFile Vagrantfile, Gemfile, Guardfile set filetype=ruby
 au BufRead,BufNewFile Gemfile set filetype=ruby
@@ -163,3 +162,7 @@ function! SudoSaveFile() abort
   let &modified = v:shell_error
 endfunction
 
+" Configure ack
+let g:ackhighlight = 1
+let g:ackpreview = 1
+nnoremap <Leader>a :Ack <C-R>"
