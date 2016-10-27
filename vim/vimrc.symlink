@@ -43,6 +43,7 @@ Plugin 'kana/vim-textobj-user'              " Preerquisite for the vim-textobj-r
 Plugin 'almostwhitehat/vim-textobj-rubyblock'     " Ruby text objects
 Plugin 'jiangmiao/auto-pairs'               " Automatically insert or delete parens/quotes in pairs
 Plugin 'wincent/vim-clipper'                " Integrate with clipper
+Plugin 'matze/vim-move'                     " Move things
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -170,3 +171,9 @@ nnoremap <Leader>a :Ack <C-R>"
 
 set colorcolumn=81
 autocmd Filetype gitcommit setlocal colorcolumn=51
+
+" Use , to repeat least : command
+nnoremap , @:
+
+" Use Ctrl-arrow for moving blocks
+let g:move_key_modifier = 'C'
