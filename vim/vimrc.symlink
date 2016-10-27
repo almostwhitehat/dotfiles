@@ -42,6 +42,7 @@ Plugin 'guns/xterm-color-table.vim'         " Show xterm colors
 Plugin 'kana/vim-textobj-user'              " Preerquisite for the vim-textobj-rubyblock
 Plugin 'almostwhitehat/vim-textobj-rubyblock'     " Ruby text objects
 Plugin 'jiangmiao/auto-pairs'               " Automatically insert or delete parens/quotes in pairs
+Plugin 'wincent/vim-clipper'                " Integrate with clipper
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -169,6 +170,3 @@ nnoremap <Leader>a :Ack <C-R>"
 
 set colorcolumn=81
 autocmd Filetype gitcommit setlocal colorcolumn=51
-
-" make remote clipboard work
-nnoremap <leader>y :call system('nc localhost 8377', @0)<CR>
