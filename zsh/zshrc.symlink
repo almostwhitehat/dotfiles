@@ -66,3 +66,6 @@ do
 done
 
 unset config_files
+
+# Make remote clipboard work
+alias clip="nc localhost 8377"

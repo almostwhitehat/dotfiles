@@ -1,23 +1,22 @@
+# Switch <prefix> key to Ctrl+a
 unbind C-b
 set -g prefix C-a
 
-# Reload with r
+# Reload tmux configuration with <prefix>r
 bind-key r source-file ~/.tmux.conf \; display-message "~/.tmux-conf reloaded"
 
+# Use colors
 set-option -g default-terminal "screen-256color"
 
+
 set -g status-left-length 50
+
+# Use Ctrl+k for clearing history
+# Configure iterm to send "0x0c" on cmd+k
 bind -n C-k send-keys -R \; clear-history
 
-# Make mouse useful in copy mode
-set -g mode-mouse on
-
-# Allow resizing panes
-set -g mouse-resize-pane on
-
-# Allow mouse to select which pane to use
-set -g mouse-select-pane on
-set -g mouse-select-window on
+# Make mouse useful
+set -g mouse on
 
 # Scroll History
 set -g history-limit 30000
@@ -34,3 +33,7 @@ bind -n S-Right resize-pane -R 15
 # Remap window splitting
 bind-key h split-window -h
 bind-key v split-window -v 
+
+# Make remote clipboard work
+# This requires setting up clipper on your host: https://github.com/wincent/clipper
+bind-key -t vi-copy Enter copy-pipe "nc localhost 8377"
