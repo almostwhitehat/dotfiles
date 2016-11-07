@@ -37,3 +37,7 @@ bind-key v split-window -v
 # Make remote clipboard work
 # This requires setting up clipper on your host: https://github.com/wincent/clipper
 bind-key -t vi-copy Enter copy-pipe "nc localhost 8377"
+
+# Make escape fast again
+set -s escape-time 0
+
