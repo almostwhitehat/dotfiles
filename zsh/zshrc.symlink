@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
+export EDITOR=vim
 
 # PhishMe
 export PM_CHEF="$HOME/code/chef/pm_chef/"
@@ -69,3 +70,6 @@ unset config_files
 
 # Make remote clipboard work
 alias clip="nc localhost 8377"
+
+# Reduce character sequence timeout
+KEYTIMEOUT=1
