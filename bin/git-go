@@ -11,8 +11,12 @@ if [ $matches -eq 0 ]; then
 elif [ $matches -eq 1 ]; then
     branch=`git b -r | grep $branch_pattern | grep -v HEAD | cut -d '/' -f 2`
     git co -B $branch origin/$branch
+    git fetch
+    git reset --hard origin/$branch
 else
     branch=`git b -r | grep $branch_pattern | grep -v HEAD | cut -d '/' -f 2 | selecta`
     git co -B $branch origin/$branch
+    git fetch
+    git reset --hard origin/$branch
 fi
 
