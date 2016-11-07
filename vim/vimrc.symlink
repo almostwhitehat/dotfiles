@@ -44,6 +44,8 @@ Plugin 'almostwhitehat/vim-textobj-rubyblock'     " Ruby text objects
 Plugin 'jiangmiao/auto-pairs'               " Automatically insert or delete parens/quotes in pairs
 Plugin 'wincent/vim-clipper'                " Integrate with clipper
 Plugin 'matze/vim-move'                     " Move things
+Plugin 'rorymckinley/vim-rubyhash'          " Change ruby hash syntax with rr
+Plugin 'wellle/targets.vim'                 " Better text objects
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
