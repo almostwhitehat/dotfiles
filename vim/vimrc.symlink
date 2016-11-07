@@ -46,6 +46,8 @@ Plugin 'wincent/vim-clipper'                " Integrate with clipper
 Plugin 'matze/vim-move'                     " Move things
 Plugin 'rorymckinley/vim-rubyhash'          " Change ruby hash syntax with rr
 Plugin 'wellle/targets.vim'                 " Better text objects
+Plugin 'ngmy/vim-rubocop'		    " Rubocop!
+Plugin 'tpope/vim-unimpaired'               " I want to be like tpope when I grow up
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -179,3 +181,6 @@ nnoremap , @:
 
 " Use Ctrl-arrow for moving blocks
 let g:move_key_modifier = 'C'
+
+" Reduce character timeouts
+set timeoutlen=1000 ttimeoutlen=0
