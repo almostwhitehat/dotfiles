@@ -48,6 +48,7 @@ Plugin 'wellle/targets.vim'                 " Better text objects
 Plugin 'ngmy/vim-rubocop'		    " Rubocop!
 Plugin 'tpope/vim-unimpaired'               " I want to be like tpope when I grow up
 Plugin 'ConradIrwin/vim-bracketed-paste'    " Automatic toggle between paste and nopaste
+Plugin 'zhaocai/GoldenView.Vim'             " Auto resize with C-L
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -184,3 +185,10 @@ let g:move_key_modifier = 'C'
 
 " Reduce character timeouts
 set timeoutlen=1000 ttimeoutlen=0
+
+" Set new splits to open to the right and below
+set splitbelow
+set splitright
+
+let g:goldenview__enable_default_mapping = 0
+nmap <silent> <C-L> <Plug>ToggleGoldenViewAutoResize
