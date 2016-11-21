@@ -49,6 +49,7 @@ Plugin 'ngmy/vim-rubocop'		    " Rubocop!
 Plugin 'tpope/vim-unimpaired'               " I want to be like tpope when I grow up
 Plugin 'ConradIrwin/vim-bracketed-paste'    " Automatic toggle between paste and nopaste
 Plugin 'zhaocai/GoldenView.Vim'             " Auto resize with C-L
+Plugin 'gioele/vim-autoswap'                " Stop bugging me about swap files
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
