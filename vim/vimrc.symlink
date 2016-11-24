@@ -47,12 +47,12 @@ Plugin 'rorymckinley/vim-rubyhash'          " Change ruby hash syntax with rr
 Plugin 'wellle/targets.vim'                 " Better text objects
 Plugin 'ngmy/vim-rubocop'		    " Rubocop!
 Plugin 'tpope/vim-unimpaired'               " I want to be like tpope when I grow up
-Plugin 'ConradIrwin/vim-bracketed-paste'    " Automatic toggle between paste and nopaste
 Plugin 'zhaocai/GoldenView.Vim'             " Auto resize with C-L
 Plugin 'gioele/vim-autoswap'                " Stop bugging me about swap files
 Plugin 'tpope/vim-eunuch'                   " UNIX commands
 Plugin 'tpope/vim-repeat'
 Plugin 'svermeulen/vim-easyclip'
+Plugin 'jgdavey/vim-blockle'                " Toggle ruby block types with <leader>b
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -190,3 +190,7 @@ if executable('rg')
   let g:ackprg = 'rg --vimgrep'
   set grepprg=ag\ --nogroup\ --nocolor
 endif
+
+" Unmap delete-surround (from vim-surround) because it causes problems when
+" pasting into Ctrl+P
+unmap ds

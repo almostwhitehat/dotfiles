@@ -71,7 +71,9 @@ unset config_files
 
 # Make remote clipboard work
 alias clip="nc localhost 8377"
-alias gs ="git status"
+alias gs="git status"
+alias gd="git diff"
+alias gdo="git diff @{upstream}"
 
 # Reduce character sequence timeout
 KEYTIMEOUT=1
