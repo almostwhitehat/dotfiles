@@ -24,6 +24,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+export PATH="/usr/local/nodejs-binary-4.4.5/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
 # shortcut to this dotfiles path is $DOTFILES_ROOT
@@ -70,6 +71,7 @@ unset config_files
 
 # Make remote clipboard work
 alias clip="nc localhost 8377"
+alias gs ="git status"
 
 # Reduce character sequence timeout
 KEYTIMEOUT=1
