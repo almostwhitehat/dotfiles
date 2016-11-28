@@ -41,3 +41,4 @@ bind-key -t vi-copy Enter copy-pipe "nc localhost 8377"
 # Make escape fast again
 set -s escape-time 0
 
+set -g focus-events on
