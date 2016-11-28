@@ -53,6 +53,8 @@ Plugin 'tpope/vim-eunuch'                   " UNIX commands
 Plugin 'tpope/vim-repeat'
 Plugin 'svermeulen/vim-easyclip'
 Plugin 'jgdavey/vim-blockle'                " Toggle ruby block types with <leader>b
+Plugin 'tmux-plugins/vim-tmux-focus-events'
+Plugin 'blueyed/vim-diminactive'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -88,6 +90,9 @@ let g:airline_theme="solarized"
 
 " bind K to grep word under cursor
 nnoremap K :Ack "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+" <Leader>s to replce word under cursor
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
 " Always show at least 5 lines above/below cursor
 set scrolloff=5
@@ -191,6 +196,6 @@ if executable('rg')
   set grepprg=ag\ --nogroup\ --nocolor
 endif
 
-" Unmap delete-surround (from vim-surround) because it causes problems when
-" pasting into Ctrl+P
-unmap ds
+let g:diminactive_use_syntax = 1
+let g:diminactive_enable_focus = 1
+hi ColorColumn ctermbg=236
