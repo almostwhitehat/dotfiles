@@ -77,3 +77,6 @@ alias gdo="git diff @{upstream}"
 
 # Reduce character sequence timeout
 KEYTIMEOUT=1
+
+# Stop bitching when I call rake tasks with [] options
+unsetopt nomatch
