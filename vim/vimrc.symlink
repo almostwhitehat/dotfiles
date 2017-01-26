@@ -15,46 +15,48 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, required
+Plugin 'SirVer/ultisnips'
+Plugin 'Valloric/YouCompleteMe'             " Code completion
 Plugin 'VundleVim/Vundle.vim'               " Plugin manager
-Plugin 'scrooloose/nerdtree'                " File browser
-Plugin 'mileszs/ack.vim'                    " Use ag for searching
+Plugin 'airblade/vim-gitgutter'             " Shows git status in left gutter
+Plugin 'almostwhitehat/vim-textobj-rubyblock'     " Ruby text objects
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'blueyed/vim-diminactive'
 Plugin 'ctrlpvim/ctrlp.vim'                 " Ctrl+P fuzzy file searcher
+Plugin 'gioele/vim-autoswap'                " Stop bugging me about swap files
+Plugin 'guns/xterm-color-table.vim'         " Show xterm colors
+Plugin 'honza/vim-snippets'
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'  " Automatically toggle between relative and absolute line numers
+Plugin 'jgdavey/vim-blockle'                " Toggle ruby block types with <leader>b
+Plugin 'jiangmiao/auto-pairs'               " Automatically insert or delete parens/quotes in pairs
+Plugin 'kana/vim-textobj-user'              " Preerquisite for the vim-textobj-rubyblock
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'luochen1990/rainbow'                " Rainbow Parentheses
+Plugin 'matze/vim-move'                     " Move things
+Plugin 'mileszs/ack.vim'                    " Use ag for searching
+Plugin 'miyakogi/conoline.vim'              " Highlights the current line
+Plugin 'ngmy/vim-rubocop'		    " Rubocop!
+Plugin 'rorymckinley/vim-rubyhash'          " Change ruby hash syntax with rr
+Plugin 'scrooloose/nerdtree'                " File browser
+Plugin 'svermeulen/vim-easyclip'
+Plugin 'tmux-plugins/vim-tmux-focus-events'
+Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-cucumber'                 " Cucumber step definition support
-Plugin 'tpope/vim-rails'                    " All kinds of rails things
 Plugin 'tpope/vim-endwise'                  " Automatically close structures
+Plugin 'tpope/vim-eunuch'                   " UNIX commands
 Plugin 'tpope/vim-fugitive'                 " Git plugin
 Plugin 'tpope/vim-obsession'                " Persistent sessions
+Plugin 'tpope/vim-rails'                    " All kinds of rails things
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'                 " Change surrounding parentheses/quotations/etc
+Plugin 'tpope/vim-unimpaired'               " I want to be like tpope when I grow up
 Plugin 'vim-airline/vim-airline'            " Status bar
 Plugin 'vim-airline/vim-airline-themes'     " Themes for airline
-Plugin 'jeffkreeftmeijer/vim-numbertoggle'  " Automatically toggle between relative and absolute line numers
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'airblade/vim-gitgutter'             " Shows git status in left gutter
-Plugin 'tpope/vim-surround'                 " Change surrounding parentheses/quotations/etc
-Plugin 'Valloric/YouCompleteMe'             " Code completion
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'miyakogi/conoline.vim'              " Highlights the current line
 Plugin 'vim-ctrlspace/vim-ctrlspace'        " Tab and window management
 Plugin 'vim-scripts/rainbow-end'            " rainbow matchers for ruby syntax
-Plugin 'luochen1990/rainbow'                " Rainbow Parentheses
-Plugin 'guns/xterm-color-table.vim'         " Show xterm colors
-Plugin 'kana/vim-textobj-user'              " Preerquisite for the vim-textobj-rubyblock
-Plugin 'almostwhitehat/vim-textobj-rubyblock'     " Ruby text objects
-Plugin 'jiangmiao/auto-pairs'               " Automatically insert or delete parens/quotes in pairs
-Plugin 'wincent/vim-clipper'                " Integrate with clipper
-Plugin 'matze/vim-move'                     " Move things
-Plugin 'rorymckinley/vim-rubyhash'          " Change ruby hash syntax with rr
 Plugin 'wellle/targets.vim'                 " Better text objects
-Plugin 'ngmy/vim-rubocop'		    " Rubocop!
-Plugin 'tpope/vim-unimpaired'               " I want to be like tpope when I grow up
+Plugin 'wincent/vim-clipper'                " Integrate with clipper
 Plugin 'zhaocai/GoldenView.Vim'             " Auto resize with C-L
-Plugin 'gioele/vim-autoswap'                " Stop bugging me about swap files
-Plugin 'tpope/vim-eunuch'                   " UNIX commands
-Plugin 'tpope/vim-repeat'
-Plugin 'svermeulen/vim-easyclip'
-Plugin 'jgdavey/vim-blockle'                " Toggle ruby block types with <leader>b
-Plugin 'tmux-plugins/vim-tmux-focus-events'
-Plugin 'blueyed/vim-diminactive'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
