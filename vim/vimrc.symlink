@@ -21,6 +21,7 @@ Plugin 'VundleVim/Vundle.vim'               " Plugin manager
 Plugin 'airblade/vim-gitgutter'             " Shows git status in left gutter
 Plugin 'almostwhitehat/vim-textobj-rubyblock'     " Ruby text objects
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'alvan/vim-closetag'                 " Auto close HTML tags with > and >> for multi-line
 Plugin 'blueyed/vim-diminactive'
 Plugin 'ctrlpvim/ctrlp.vim'                 " Ctrl+P fuzzy file searcher
 Plugin 'gioele/vim-autoswap'                " Stop bugging me about swap files
@@ -201,3 +202,6 @@ endif
 let g:diminactive_use_syntax = 1
 let g:diminactive_enable_focus = 1
 hi ColorColumn ctermbg=236
+
+" Filetypes to auto close HTML tags
+let g:closetag_filenames = "*.html,*.xhtml,*.html.erb"
