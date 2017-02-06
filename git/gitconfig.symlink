@@ -8,6 +8,7 @@
   pf = push --force-with-lease
   diff-commits = "!git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative master..$(git branch-name)"
   grog = log --graph --abbrev-commit --decorate --all --format=format:\"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)\"
+  commend = commit --amend --no-edit
 [include]
   path = ~/.gitconfig.local
 [hub]
