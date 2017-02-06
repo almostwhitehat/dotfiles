@@ -58,6 +58,14 @@ Plugin 'vim-scripts/rainbow-end'            " rainbow matchers for ruby syntax
 Plugin 'wellle/targets.vim'                 " Better text objects
 Plugin 'wincent/vim-clipper'                " Integrate with clipper
 Plugin 'zhaocai/GoldenView.Vim'             " Auto resize with C-L
+Plugin 'gioele/vim-autoswap'                " Stop bugging me about swap files
+Plugin 'tpope/vim-eunuch'                   " UNIX commands
+Plugin 'tpope/vim-repeat'
+Plugin 'svermeulen/vim-easyclip'
+Plugin 'jgdavey/vim-blockle'                " Toggle ruby block types with <leader>b
+Plugin 'tmux-plugins/vim-tmux-focus-events'
+Plugin 'blueyed/vim-diminactive'
+Plugin 'mcmillion/ale'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -205,3 +213,6 @@ hi ColorColumn ctermbg=236
 
 " Filetypes to auto close HTML tags
 let g:closetag_filenames = "*.html,*.xhtml,*.html.erb"
+
+nnoremap <silent> <Leader><right> :vertical resize +15<CR>
+nnoremap <silent> <Leader><left> :vertical resize -15<CR>
