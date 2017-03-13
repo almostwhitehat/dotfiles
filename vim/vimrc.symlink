@@ -10,6 +10,8 @@ set t_Co=256
 " Include line numbers
 set number
 
+" Fu
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -23,10 +25,7 @@ Plugin 'almostwhitehat/vim-textobj-rubyblock'     " Ruby text objects
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'alvan/vim-closetag'                 " Auto close HTML tags with > and >> for multi-line
 Plugin 'blueyed/vim-diminactive'
-Plugin 'ctrlpvim/ctrlp.vim'                 " Ctrl+P fuzzy file searcher
-Plugin 'gioele/vim-autoswap'                " Stop bugging me about swap files
-Plugin 'guns/xterm-color-table.vim'         " Show xterm colors
-Plugin 'honza/vim-snippets'
+Plugin 'ctrlpvim/ctrlp.vim'                 " Ctrl+P fuzza/vim-snippets'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'  " Automatically toggle between relative and absolute line numers
 Plugin 'jgdavey/vim-blockle'                " Toggle ruby block types with <leader>b
 Plugin 'jiangmiao/auto-pairs'               " Automatically insert or delete parens/quotes in pairs
@@ -35,7 +34,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'luochen1990/rainbow'                " Rainbow Parentheses
 Plugin 'matze/vim-move'                     " Move things
 Plugin 'mcmillion/ale'
-Plugin 'mileszs/ack.vim'                    " Use ag for searching
+Plugin 'jremmen/vim-ripgrep'
 Plugin 'miyakogi/conoline.vim'              " Highlights the current line
 Plugin 'ngmy/vim-rubocop'		    " Rubocop!
 Plugin 'rorymckinley/vim-rubyhash'          " Change ruby hash syntax with rr
@@ -136,8 +135,8 @@ noremap <leader>= :!bundle exec rubocop --auto-correct %
 nmap 0 ^
 
 " jk or kj in insert mode to return to normal and save changes 
-imap jk <ESC>:w<CR> 
-imap kj <ESC>:w<CR> 
+inoremap ZZ <ESC>:x<CR> 
+nnoremap ZZ :x<CR> 
 
 "Ruby is new, and sometimes funtimes
 au BufRead,BufNewFile Vagrantfile, Gemfile, Guardfile set filetype=ruby
@@ -209,3 +208,21 @@ let g:closetag_filenames = "*.html,*.xhtml,*.html.erb"
 
 nnoremap <silent> <Leader><right> :vertical resize +15<CR>
 nnoremap <silent> <Leader><left> :vertical resize -15<CR>
+
+nnoremap ]c />>>>>><CR>
+nnoremap dg3 :diffget //3<CR>
+nnoremap dq :only<CR>:x<CR>
+
+function AddFocusToPreviousRspecBlock()
+  ?^\s*\(context\|it\|describe\)
+  s/ do$/, focus: true do
+  :w
+endfunction
+
+function RemoveAllFocus()
+  %s/, focus: true do$/ do/g
+  :w
+endfunction
+
+nnoremap ff :<C-U>call AddFocusToPreviousRspecBlock()<CR>
+nnoremap FF :<C-U>call RemoveAllFocus()<CR>
