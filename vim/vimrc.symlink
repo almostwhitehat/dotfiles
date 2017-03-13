@@ -29,12 +29,12 @@ Plugin 'ctrlpvim/ctrlp.vim'                 " Ctrl+P fuzza/vim-snippets'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'  " Automatically toggle between relative and absolute line numers
 Plugin 'jgdavey/vim-blockle'                " Toggle ruby block types with <leader>b
 Plugin 'jiangmiao/auto-pairs'               " Automatically insert or delete parens/quotes in pairs
+Plugin 'jremmen/vim-ripgrep'
 Plugin 'kana/vim-textobj-user'              " Preerquisite for the vim-textobj-rubyblock
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'luochen1990/rainbow'                " Rainbow Parentheses
 Plugin 'matze/vim-move'                     " Move things
 Plugin 'mcmillion/ale'
-Plugin 'jremmen/vim-ripgrep'
 Plugin 'miyakogi/conoline.vim'              " Highlights the current line
 Plugin 'ngmy/vim-rubocop'		    " Rubocop!
 Plugin 'rorymckinley/vim-rubyhash'          " Change ruby hash syntax with rr
