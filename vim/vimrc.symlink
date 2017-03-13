@@ -58,6 +58,7 @@ Plugin 'vim-scripts/rainbow-end'            " rainbow matchers for ruby syntax
 Plugin 'wellle/targets.vim'                 " Better text objects
 Plugin 'wincent/vim-clipper'                " Integrate with clipper
 Plugin 'zhaocai/GoldenView.Vim'             " Auto resize with C-L
+Plugin 'gioele/vim-autoswap'              " Stop bugging me about swap files
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
