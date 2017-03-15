@@ -26,6 +26,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'alvan/vim-closetag'                 " Auto close HTML tags with > and >> for multi-line
 Plugin 'blueyed/vim-diminactive'
 Plugin 'ctrlpvim/ctrlp.vim'                 " Ctrl+P fuzza/vim-snippets'
+Plugin 'gioele/vim-autoswap'              " Stop bugging me about swap files
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'  " Automatically toggle between relative and absolute line numers
 Plugin 'jgdavey/vim-blockle'                " Toggle ruby block types with <leader>b
 Plugin 'jiangmiao/auto-pairs'               " Automatically insert or delete parens/quotes in pairs
@@ -34,7 +35,7 @@ Plugin 'kana/vim-textobj-user'              " Preerquisite for the vim-textobj-r
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'luochen1990/rainbow'                " Rainbow Parentheses
 Plugin 'matze/vim-move'                     " Move things
-Plugin 'mcmillion/ale'
+Plugin 'mbbill/undotree'
 Plugin 'miyakogi/conoline.vim'              " Highlights the current line
 Plugin 'ngmy/vim-rubocop'		    " Rubocop!
 Plugin 'rorymckinley/vim-rubyhash'          " Change ruby hash syntax with rr
@@ -55,10 +56,10 @@ Plugin 'vim-airline/vim-airline'            " Status bar
 Plugin 'vim-airline/vim-airline-themes'     " Themes for airline
 Plugin 'vim-ctrlspace/vim-ctrlspace'        " Tab and window management
 Plugin 'vim-scripts/rainbow-end'            " rainbow matchers for ruby syntax
+Plugin 'w0rp/ale'                           " Run linters asnchornornorncrhrousously.
 Plugin 'wellle/targets.vim'                 " Better text objects
 Plugin 'wincent/vim-clipper'                " Integrate with clipper
 Plugin 'zhaocai/GoldenView.Vim'             " Auto resize with C-L
-Plugin 'gioele/vim-autoswap'              " Stop bugging me about swap files
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -227,3 +228,10 @@ endfunction
 
 nnoremap ff :<C-U>call AddFocusToPreviousRspecBlock()<CR>
 nnoremap FF :<C-U>call RemoveAllFocus()<CR>
+
+" Config for undotree
+if has("persistent_undo")
+    set undodir=~/.undodir/
+    set undofile
+endif
+nnoremap <Leader>u :UndotreeToggle<CR>
