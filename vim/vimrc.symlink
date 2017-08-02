@@ -89,7 +89,7 @@ let g:ctrlp_max_depth=40
 set laststatus=2
 
 " Style vim and plugins
-colorscheme solarized
+colorscheme darkblue
 set background=dark
 let g:airline_theme="solarized"
 
