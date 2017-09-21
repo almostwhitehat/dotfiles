@@ -12,7 +12,8 @@ export PM_CHEF="$HOME/code/chef/pm_chef/"
 ZSH_THEME="agnoster"
 HYPHEN_INSENSITIVE="true"
 
-plugins=(git git-extras rake ruby bundler command-not-found common-aliases dircycle sudo z osx)
+plugins=(rbenv git git-extras rake ruby bundler command-not-found common-aliases dircycle sudo z osx)
+plugins=(you-should-use $plugins)
 
 source $ZSH/oh-my-zsh.sh
 
