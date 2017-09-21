@@ -17,6 +17,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, required
+Plugin 'vim-ruby/vim-ruby'
 Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'             " Code completion
 Plugin 'VundleVim/Vundle.vim'               " Plugin manager
@@ -237,3 +238,5 @@ command! -bang -nargs=* Rg
   \   <bang>0 ? fzf#vim#with_preview('up:60%')
   \           : fzf#vim#with_preview('right:50%:hidden', '?'),
   \   <bang>0)
+
+let g:ruby_path = "/usr/local/opt/rbenv/shims/ruby"
