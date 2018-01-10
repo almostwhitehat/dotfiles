@@ -82,3 +82,16 @@ KEYTIMEOUT=1
 
 # Stop bitching when I call rake tasks with [] options
 unsetopt nomatch
+alias rake='noglob rake'
+
+# Fix ssh key in reattached tmux sessions
+fixssh() {
+  for key in SSH_AUTH_SOCK SSH_CONNECTION SSH_CLIENT; do
+    if (tmux show-environment | grep "^${key}" > /dev/null); then
+      value=`tmux show-environment | grep "^${key}" | sed -e "s/^[A-Z_]*=//"`
+      export ${key}="${value}"
+    fi
+  done
+}
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

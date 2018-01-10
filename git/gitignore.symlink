@@ -1,3 +1,4 @@
+.local_pryrc.rb
 .yardoc
 .ignore
 .hgignore
@@ -9,3 +10,4 @@
 .pryrc
 vagrant-*.json
 *.swo
+tags

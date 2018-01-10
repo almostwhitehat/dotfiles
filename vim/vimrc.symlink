@@ -18,6 +18,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'             " Code completion
 Plugin 'VundleVim/Vundle.vim'               " Plugin manager
@@ -57,7 +58,7 @@ Plugin 'tpope/vim-unimpaired'               " I want to be like tpope when I gro
 Plugin 'vim-airline/vim-airline'            " Status bar
 Plugin 'vim-airline/vim-airline-themes'     " Themes for airline
 Plugin 'vim-scripts/rainbow-end'            " rainbow matchers for ruby syntax
-Plugin 'w0rp/ale'                           " Run linters asnchornornorncrhrousously.
+"Plugin 'w0rp/ale'                           " Run linters asnchornornorncrhrousously.
 Plugin 'wellle/targets.vim'                 " Better text objects
 Plugin 'wincent/vim-clipper'                " Integrate with clipper
 Plugin 'zhaocai/GoldenView.Vim'             " Auto resize with C-L
@@ -92,7 +93,7 @@ set laststatus=2
 " Style vim and plugins
 colorscheme darkblue
 set background=dark
-let g:airline_theme="solarized"
+let g:airline_theme = 'powerlineish'
 
 " bind K to grep word under cursor
 nnoremap K :Ack "\b<C-R><C-W>\b"<CR>:cw<CR>
@@ -240,3 +241,18 @@ command! -bang -nargs=* Rg
   \   <bang>0)
 
 let g:ruby_path = "/usr/local/opt/rbenv/shims/ruby"
+let g:ycm_collect_identifiers_from_tags_files = 1
+
+function! s:Hmm()
+  let filetype=&ft
+  diffthis
+  vnew | r # | normal! 1Gdd
+  diffthis
+  exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
+endfunction
+com! Hmm call s:Hmm()
+
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+au VimEnter * IndentGuidesEnable
