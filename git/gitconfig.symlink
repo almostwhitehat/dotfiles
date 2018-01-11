@@ -29,7 +29,7 @@
   excludesfile = ~/.gitignore
   editor = vim
   pager = diff-so-fancy | less --tabs=4 -RFX
-	fileMode = false
+  fileMode = false
 [apply]
   whitespace = nowarn
 [mergetool]
@@ -43,8 +43,8 @@
 [pull]
   rebase = true
 [mergetool "fugitive"]
-	cmd = vim -f -c \"Gdiff\" \"$MERGED\"
+  cmd = vim -f -c \"Gdiff\" \"$MERGED\"
 [merge]
-	tool = fugitive
+  tool = fugitive
 [rerere]
-	enabled = false
+  enabled = false
