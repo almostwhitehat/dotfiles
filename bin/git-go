@@ -14,7 +14,7 @@ elif [ $matches -eq 1 ]; then
     git fetch
     git reset --hard origin/$branch
 else
-    branch=`git b -r | grep $branch_pattern | grep -v HEAD | cut -d '/' -f 2 | selecta`
+    branch=`git b -r | grep $branch_pattern | grep -v HEAD | cut -d '/' -f 2 | fzf`
     git co -B $branch origin/$branch
     git fetch
     git reset --hard origin/$branch
