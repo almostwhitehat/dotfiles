@@ -41,7 +41,6 @@ Plugin 'matze/vim-move'                     " Move things
 Plugin 'mbbill/undotree'
 Plugin 'miyakogi/conoline.vim'              " Highlights the current line
 Plugin 'ngmy/vim-rubocop'		    " Rubocop!
-Plugin 'rorymckinley/vim-rubyhash'          " Change ruby hash syntax with rr
 Plugin 'scrooloose/nerdtree'                " File browser
 Plugin 'svermeulen/vim-easyclip'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
