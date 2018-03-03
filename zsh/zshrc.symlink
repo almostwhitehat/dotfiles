@@ -3,7 +3,7 @@ export ZSH=~/.oh-my-zsh
 export EDITOR=vim
 
 # PhishMe
-export PM_CHEF="$HOME/code/chef/pm_chef/"
+export PATH="/opt/chefdk/bin:$PATH"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -12,8 +12,9 @@ export PM_CHEF="$HOME/code/chef/pm_chef/"
 ZSH_THEME="agnoster"
 HYPHEN_INSENSITIVE="true"
 
-plugins=(rbenv git git-extras rake ruby bundler command-not-found common-aliases dircycle sudo z osx)
+plugins=(git git-extras rake ruby bundler common-aliases dircycle sudo z osx)
 plugins=(you-should-use $plugins)
+plugins=(rbenv $plugins)
 
 source $ZSH/oh-my-zsh.sh
 
