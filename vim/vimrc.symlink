@@ -17,6 +17,9 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, required
+Plugin 'hashivim/vim-terraform'
+Plugin 'modille/groovy.vim'
+Plugin 'martinda/Jenkinsfile-vim-syntax'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'SirVer/ultisnips'
@@ -29,18 +32,17 @@ Plugin 'alvan/vim-closetag'                 " Auto close HTML tags with > and >>
 Plugin 'blueyed/vim-diminactive'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
 Plugin 'junegunn/fzf.vim'
-Plugin 'gioele/vim-autoswap'              " Stop bugging me about swap files
+Plugin 'gioele/vim-autoswap'                " Stop bugging me about swap files
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'  " Automatically toggle between relative and absolute line numers
 Plugin 'jgdavey/vim-blockle'                " Toggle ruby block types with <leader>b
 Plugin 'jiangmiao/auto-pairs'               " Automatically insert or delete parens/quotes in pairs
 Plugin 'jremmen/vim-ripgrep'
 Plugin 'kana/vim-textobj-user'              " Preerquisite for the vim-textobj-rubyblock
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'luochen1990/rainbow'                " Rainbow Parentheses
-Plugin 'matze/vim-move'                     " Move things
 Plugin 'mbbill/undotree'
 Plugin 'miyakogi/conoline.vim'              " Highlights the current line
 Plugin 'ngmy/vim-rubocop'		    " Rubocop!
+Plugin 'rorymckinley/vim-rubyhash'          " Change ruby hash syntax with rr
 Plugin 'scrooloose/nerdtree'                " File browser
 Plugin 'svermeulen/vim-easyclip'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
@@ -49,7 +51,6 @@ Plugin 'tpope/vim-cucumber'                 " Cucumber step definition support
 Plugin 'tpope/vim-endwise'                  " Automatically close structures
 Plugin 'tpope/vim-eunuch'                   " UNIX commands
 Plugin 'tpope/vim-fugitive'                 " Git plugin
-Plugin 'tpope/vim-obsession'                " Persistent sessions
 Plugin 'tpope/vim-rails'                    " All kinds of rails things
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'                 " Change surrounding parentheses/quotations/etc
@@ -229,6 +230,8 @@ if has("persistent_undo")
 endif
 nnoremap <Leader>u :UndotreeToggle<CR>
 
+map <Leader><Bs> 0d0i<space><Esc>gkJ
+
 " Use Ctrl+p to launch fzf (because habits)
 nnoremap <C-p> :Files<CR>
 nnoremap <C-space> :Buffers<CR>
@@ -257,3 +260,8 @@ let g:indent_guides_guide_size = 1
 au VimEnter * IndentGuidesEnable
 
 set encoding=utf-8
+
+au BufReadPost Jenkinsfile set syntax=groovy
+au BufReadPost Jenkinsfile set filetype=groovy
+
+let g:terraform_align=1
