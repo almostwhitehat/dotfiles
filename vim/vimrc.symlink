@@ -13,57 +13,56 @@ set number
 " Fu
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
 " let Vundle manage Vundle, required
-Plugin 'hashivim/vim-terraform'
-Plugin 'modille/groovy.vim'
-Plugin 'martinda/Jenkinsfile-vim-syntax'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'SirVer/ultisnips'
-Plugin 'Valloric/YouCompleteMe'             " Code completion
-Plugin 'VundleVim/Vundle.vim'               " Plugin manager
-Plugin 'airblade/vim-gitgutter'             " Shows git status in left gutter
-Plugin 'almostwhitehat/vim-textobj-rubyblock'     " Ruby text objects
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'alvan/vim-closetag'                 " Auto close HTML tags with > and >> for multi-line
-Plugin 'blueyed/vim-diminactive'
-Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
-Plugin 'junegunn/fzf.vim'
-Plugin 'gioele/vim-autoswap'                " Stop bugging me about swap files
-Plugin 'jeffkreeftmeijer/vim-numbertoggle'  " Automatically toggle between relative and absolute line numers
-Plugin 'jgdavey/vim-blockle'                " Toggle ruby block types with <leader>b
-Plugin 'jiangmiao/auto-pairs'               " Automatically insert or delete parens/quotes in pairs
-Plugin 'jremmen/vim-ripgrep'
-Plugin 'kana/vim-textobj-user'              " Preerquisite for the vim-textobj-rubyblock
-Plugin 'luochen1990/rainbow'                " Rainbow Parentheses
-Plugin 'mbbill/undotree'
-Plugin 'miyakogi/conoline.vim'              " Highlights the current line
-Plugin 'ngmy/vim-rubocop'		    " Rubocop!
-Plugin 'rorymckinley/vim-rubyhash'          " Change ruby hash syntax with rr
-Plugin 'scrooloose/nerdtree'                " File browser
-Plugin 'svermeulen/vim-easyclip'
-Plugin 'tmux-plugins/vim-tmux-focus-events'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-cucumber'                 " Cucumber step definition support
-Plugin 'tpope/vim-endwise'                  " Automatically close structures
-Plugin 'tpope/vim-eunuch'                   " UNIX commands
-Plugin 'tpope/vim-fugitive'                 " Git plugin
-Plugin 'tpope/vim-rails'                    " All kinds of rails things
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'                 " Change surrounding parentheses/quotations/etc
-Plugin 'tpope/vim-unimpaired'               " I want to be like tpope when I grow up
-Plugin 'vim-airline/vim-airline'            " Status bar
-Plugin 'vim-airline/vim-airline-themes'     " Themes for airline
-Plugin 'vim-scripts/rainbow-end'            " rainbow matchers for ruby syntax
+Plug 'hashivim/vim-terraform'
+Plug 'modille/groovy.vim'
+Plug 'martinda/Jenkinsfile-vim-syntax'
+Plug 'vim-ruby/vim-ruby'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'SirVer/ultisnips'
+Plug 'Valloric/YouCompleteMe'             " Code completion
+Plug 'VundleVim/Vundle.vim'               " Plugin manager
+Plug 'airblade/vim-gitgutter'             " Shows git status in left gutter
+Plug 'almostwhitehat/vim-textobj-rubyblock'     " Ruby text objects
+Plug 'altercation/vim-colors-solarized'
+Plug 'alvan/vim-closetag'                 " Auto close HTML tags with > and >> for multi-line
+Plug 'blueyed/vim-diminactive'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
+Plug 'junegunn/fzf.vim'
+Plug 'gioele/vim-autoswap'                " Stop bugging me about swap files
+Plug 'jeffkreeftmeijer/vim-numbertoggle'  " Automatically toggle between relative and absolute line numers
+Plug 'jgdavey/vim-blockle'                " Toggle ruby block types with <leader>b
+Plug 'jiangmiao/auto-pairs'               " Automatically insert or delete parens/quotes in pairs
+Plug 'jremmen/vim-ripgrep'
+Plug 'kana/vim-textobj-user'              " Preerquisite for the vim-textobj-rubyblock
+Plug 'luochen1990/rainbow'                " Rainbow Parentheses
+Plug 'mbbill/undotree'
+Plug 'miyakogi/conoline.vim'              " Highlights the current line
+Plug 'ngmy/vim-rubocop'		    " Rubocop!
+Plug 'rorymckinley/vim-rubyhash'          " Change ruby hash syntax with rr
+Plug 'scrooloose/nerdtree'                " File browser
+Plug 'svermeulen/vim-easyclip'
+Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-cucumber'                 " Cucumber step definition support
+Plug 'tpope/vim-endwise'                  " Automatically close structures
+Plug 'tpope/vim-eunuch'                   " UNIX commands
+Plug 'tpope/vim-fugitive'                 " Git plugin
+Plug 'tpope/vim-rails'                    " All kinds of rails things
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'                 " Change surrounding parentheses/quotations/etc
+Plug 'tpope/vim-unimpaired'               " I want to be like tpope when I grow up
+Plug 'vim-airline/vim-airline'            " Status bar
+Plug 'vim-airline/vim-airline-themes'     " Themes for airline
+Plug 'vim-scripts/rainbow-end'            " rainbow matchers for ruby syntax
 "Plugin 'w0rp/ale'                           " Run linters asnchornornorncrhrousously.
-Plugin 'wellle/targets.vim'                 " Better text objects
-Plugin 'wincent/vim-clipper'                " Integrate with clipper
-Plugin 'zhaocai/GoldenView.Vim'             " Auto resize with C-L
+Plug 'wellle/targets.vim'                 " Better text objects
+Plug 'wincent/vim-clipper'                " Integrate with clipper
+Plug 'zhaocai/GoldenView.Vim'             " Auto resize with C-L
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
+call plug#end()
 
 " Syntax highlighting
 syntax enable
