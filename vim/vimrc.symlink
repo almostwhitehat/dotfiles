@@ -260,3 +260,8 @@ au BufReadPost Jenkinsfile set syntax=groovy
 au BufReadPost Jenkinsfile set filetype=groovy
 
 let g:terraform_align=1
+
+" Undo tree
+nnoremap <C-i> :UndotreeToggle<CR>
+nnoremap <C-o> :earlier<CR>
+nnoremap <C-p> :later<CR>
