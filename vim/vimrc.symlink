@@ -18,7 +18,6 @@ call plug#begin('~/.vim/plugged')
 " let Vundle manage Vundle, required
 Plug 'SirVer/ultisnips'
 Plug 'Valloric/YouCompleteMe'             " Code completion
-Plug 'VundleVim/Vundle.vim'               " Plugin manager
 Plug 'airblade/vim-gitgutter'             " Shows git status in left gutter
 Plug 'almostwhitehat/vim-textobj-rubyblock'     " Ruby text objects
 Plug 'altercation/vim-colors-solarized'
