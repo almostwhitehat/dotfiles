@@ -18,7 +18,6 @@ call plug#begin('~/.vim/plugged')
 " let Vundle manage Vundle, required
 Plug 'hashivim/vim-terraform'
 Plug 'modille/groovy.vim'
-Plug 'martinda/Jenkinsfile-vim-syntax'
 Plug 'vim-ruby/vim-ruby'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'SirVer/ultisnips'
