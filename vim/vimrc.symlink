@@ -16,7 +16,6 @@ set number
 call plug#begin('~/.vim/plugged')
 
 " let Vundle manage Vundle, required
-"Plugin 'w0rp/ale'                           " Run linters asnchornornorncrhrousously.
 Plug 'SirVer/ultisnips'
 Plug 'Valloric/YouCompleteMe'             " Code completion
 Plug 'VundleVim/Vundle.vim'               " Plugin manager
@@ -57,6 +56,7 @@ Plug 'vim-airline/vim-airline'            " Status bar
 Plug 'vim-airline/vim-airline-themes'     " Themes for airline
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/rainbow-end'            " rainbow matchers for ruby syntax
+Plug 'w0rp/ale'                           " Run linters asnchornornorncrhrousously.
 Plug 'wellle/targets.vim'                 " Better text objects
 Plug 'wincent/vim-clipper'                " Integrate with clipper
 Plug 'zhaocai/GoldenView.Vim'             " Auto resize with C-L
