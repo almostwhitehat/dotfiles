@@ -10,8 +10,6 @@ set t_Co=256
 " Include line numbers
 set number
 
-" Fu
-
 " set the runtime path to include Vundle and initialize
 call plug#begin('~/.vim/plugged')
 
