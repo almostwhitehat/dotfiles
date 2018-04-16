@@ -1,3 +1,4 @@
 git/gitconfig.local.symlink
 vim/vim.symlink/.netrwhist
 vim/vim.symlink/bundle/
+local
