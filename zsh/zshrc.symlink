@@ -108,6 +108,8 @@ export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
 export PATH="$GOBIN:$PATH"
 
+export PATH="/usr/local/opt/postgresql@9.4/bin:$PATH"
+
 # Make brew's NVM work
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
