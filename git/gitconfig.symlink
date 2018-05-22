@@ -11,6 +11,7 @@
   grog = log --graph --abbrev-commit --decorate --all --format=format:\"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)\"
   commend = commit --amend --no-edit
   fzf = !git fetch && branch=$(git branch -r | grep -v HEAD | cut -d '/' -f 2 | fzf -i --query=$1) && git checkout -B $branch origin/$branch && git reset --hard origin/$branch
+  go = !git fetch && branch=$(git branch -r | grep -v HEAD | cut -d '/' -f 2 | fzf -i --query=$1) && git checkout -B $branch origin/$branch && git reset --hard origin/$branch
 [include]
   path = ~/.gitconfig.local
 [hub]
