@@ -5,12 +5,13 @@ export EDITOR=vim
 # PhishMe
 export PATH="/opt/chefdk/bin:$PATH"
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+# Remember to link the theme
+# ln -s ~/dev/dotfiles/oh-my-zsh/mattmetzger.zsh-theme ~/.oh-my-zsh/custom/themes/
+ZSH_THEME="mattmetzger"
 HYPHEN_INSENSITIVE="true"
+
+# Set DEFAULT_USER so zsh theme doesn't show it at the prompt
+DEFAULT_USER="matthewmetzger"
 
 plugins=(git git-extras rake ruby bundler common-aliases dircycle sudo z osx)
 plugins=(rvm you-should-use $plugins)
