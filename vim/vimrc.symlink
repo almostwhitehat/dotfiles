@@ -13,9 +13,16 @@ set number
 " set the runtime path to include Vundle and initialize
 call plug#begin('~/.vim/plugged')
 
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
 " let Vundle manage Vundle, required
-Plug 'SirVer/ultisnips'
-Plug 'Valloric/YouCompleteMe'             " Code completion
+Plug 'fatih/vim-go'
 Plug 'airblade/vim-gitgutter'             " Shows git status in left gutter
 Plug 'almostwhitehat/vim-textobj-rubyblock'     " Ruby text objects
 Plug 'altercation/vim-colors-solarized'
@@ -262,6 +269,13 @@ au BufReadPost Jenkinsfile set filetype=groovy
 let g:terraform_align=1
 
 " Undo tree
+if has("persistent_undo")
+    set undodir=~/.undodir/
+    set undofile
+endif
 nnoremap <C-i> :UndotreeToggle<CR>
-nnoremap <C-o> :earlier<CR>
-nnoremap <C-p> :later<CR>
+nnoremap <u> :earlier<CR>
+nnoremap <C-u> :later<CR>
+
+" Start deoplete on startup
+let g:deoplete#enable_at_startup = 1
