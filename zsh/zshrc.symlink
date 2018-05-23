@@ -84,6 +84,8 @@ alias gs="git status"
 alias gd="git diff"
 alias gdo="git diff @{upstream}"
 alias grh="git reset --hard"
+alias tfw="terraform workspace"
+alias tf="terraform"
 
 # Reduce character sequence timeout
 KEYTIMEOUT=1
