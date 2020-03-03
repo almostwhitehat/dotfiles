@@ -86,6 +86,7 @@ alias gdo="git diff @{upstream}"
 alias grh="git reset --hard"
 alias tfw="terraform workspace"
 alias tf="terraform"
+alias uWu="echo 'Rawr xd *nuzzles you and notices your bulge* OwO whats this?'"
 
 # Reduce character sequence timeout
 KEYTIMEOUT=1
